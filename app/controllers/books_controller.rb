@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   end
 
   def index
+    @books = Book.all
     @book = Book.new
   end
   def create
@@ -10,14 +11,14 @@ class BooksController < ApplicationController
     book.save
     redirect_to '/top'
   end
-   
-   
+
+
   private
   def book_params
     params.require(:book).permit(:title, :body)
   end
-  
-  
+
+
   def show
   end
 end
