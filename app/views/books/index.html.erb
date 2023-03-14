@@ -3,7 +3,9 @@
 <% @books.each do |book| %>
 
   <p>タイトル</p>
-  <span><%= book.title %></span>
+  <span>
+  <%= link_to book.title, "/books/#{book.id}"%>
+  </span>
 
 <% end %>
 

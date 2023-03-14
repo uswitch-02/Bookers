@@ -12,6 +12,10 @@ class BooksController < ApplicationController
     redirect_to '/top'
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
 
   private
   def book_params
@@ -19,7 +23,5 @@ class BooksController < ApplicationController
   end
 
 
-  def show
-    @book = Book.find(params[:id])
-  end
+  
 end
