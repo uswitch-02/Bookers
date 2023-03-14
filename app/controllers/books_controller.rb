@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to '/top'
+    redirect_to list_path(list.id)
   end
 
   def show

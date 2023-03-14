@@ -4,7 +4,7 @@
 
   <p>タイトル</p>
   <span>
-  <%= link_to book.title, "/books/#{book.id}"%>
+  <%= link_to book.title, book_path(book.id)%>
   </span>
 
 <% end %>
