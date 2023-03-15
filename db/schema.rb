@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2023_03_12_071149) do
 
-  create_table "bookers", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "body"
